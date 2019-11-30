@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  background: #000;
+}
+
+.container {
+  width: 85%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.wrapper .hero {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 350px;
+  height: 232px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.wrapper .hero .hero-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper .hero .hero-img::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #f56;
+  -webkit-animation: slide_right 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+          animation: slide_right 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.wrapper .hero .hero-img img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-animation: img_show 1s ease-in-out forwards;
+          animation: img_show 1s ease-in-out forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.wrapper .left-content {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 0%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: expand_right 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+          animation: expand_right 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.wrapper .left-content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 8.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .left-content nav .hamburger {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 3rem;
+  color: #0c1b31d4;
+}
+
+.wrapper .left-content nav ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.wrapper .left-content nav ul li:not(:last-child) {
+  margin: 0 2rem;
+}
+
+.wrapper .left-content nav ul li a {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #0c1b31d4;
+}
+
+.wrapper .left-content .hero-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper .left-content .hero-content .hero-description {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.wrapper .left-content .hero-content .hero-description h1 {
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: #0c1b31d4;
+}
+
+.wrapper .left-content .hero-content .hero-description .quote {
+  font-size: 1.4rem;
+  color: #777;
+  padding: 1.1rem 0 1.5rem 0;
+  display: block;
+}
+
+.wrapper .left-content .hero-content .hero-description .paragraph {
+  width: 55%;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons a {
+  display: inline-block;
+  padding: .8rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons .btn-secondary {
+  background: #0c1b31d4;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons .btn-secondary:hover {
+  background: transparent;
+  border: 1px solid #0c1b31d4;
+  color: #0c1b31d4;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons .btn-outline {
+  border: 1px solid #0c1b31d4;
+  color: #0c1b31d4;
+}
+
+.wrapper .left-content .hero-content .hero-description .buttons .btn-outline:hover {
+  background: #0c1b31d4;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.wrapper .right-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper .right-content .right-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper .right-content .right-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  -webkit-animation: slide_right 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+          animation: slide_right 1.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+.wrapper .right-content .right-img img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-animation: img_show 1s ease-in-out forwards;
+          animation: img_show 1s ease-in-out forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+@-webkit-keyframes expand_right {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes expand_right {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes img_show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes img_show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide_right {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slide_right {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
